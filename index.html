@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Practice</title>
+    <link rel="stylesheet" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+  <body ng-app="DragNDrop">
+
+    <div class="container">
+
+        <div ng-view></div>
+
+    </div>
+
+
+<!-- Third Party Libraries -->
+    <script src="lib/bower_components/firebase/firebase.js"></script>
+    <script src="lib/bower_components/angular/angular.min.js"></script>
+    <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="lib/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+
+<!-- App File -->
+    <script src="app/app.js"></script>
+
+<!-- Credentials -->
+    <script src='app/values/fb-creds.js'></script>
+
+
+<!-- Providers -->
+    <script src="app/factories/ItemFactory.js"></script>
+
+<!-- Controllers -->
+    <script src="app/ctrls/itemFormCtrl.js"></script>
+    <script src="app/ctrls/itemListCtrl.js"></script>
+
+  </body>
+</html>

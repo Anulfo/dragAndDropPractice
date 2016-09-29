@@ -1,0 +1,12 @@
+<h1>Item Create Form</h1>
+<form>
+    <div class="form-group">
+        <label>Item Name</label>
+        <input type="text" class="form-control" placeholder="Item Name" ng-model="newItem.name" />
+    </div>
+    <div class="form-group">
+        <label>Item PseudoOrder</label>
+        <input type="text" class="form-control" placeholder="e.g 1,2" ng-model="newItem.position">
+    </div>
+    <button class="btn btn-default" ng-click="addNewItem()">Save Item</button>
+</form>
