@@ -1,11 +1,11 @@
 <h1>Item List</h1>
 <div class="row">
-  <div ng-repeat="item in items">
+  <div ng-repeat="item in items | orderBy : 'position'" >
     <div class="panel panel-primary">
       <div class="panel-body">
         <div class="col-xs-1"></div>
         <div class="col-xs-3"><h2>{{item.name}}</h2></div>
-        <div class="col-xs-3"><h2>{{item.position}}</h2></div>
+        <div class="col-xs-3"><h2>Position: {{item.position}}</h2></div>
         <div class="col-xs-2"><button class="btn btn-" ng-click="itemDelete(item.id)">Delete</button></div>
         <div class="col-xs-1"></div>
       </div>
