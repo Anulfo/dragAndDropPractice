@@ -7,7 +7,7 @@ app.factory("ItemStorage", ($q, $http, FirebaseURL, $location) => {
     let items = [];
     //This is the Angular way of doing promises
     return $q((resolve, reject)=>{
-      $http.get(`${FirebaseURL}items.json?orderByChild="position"`)
+      $http.get(`${FirebaseURL}items.json?orderBy="position"`)
       //Angular does the parsing of the object for you, just like AJAX or getJSON
       .success((itemObject)=>{
         if (itemObject !== null){
@@ -50,9 +50,9 @@ app.factory("ItemStorage", ($q, $http, FirebaseURL, $location) => {
     };
 
     let updateItem = (itemId, editedItem) => {
+        console.log(itemId, editedItem)
         return $q( (resolve, reject) => {
-            $http.patch(`${FirebaseURL}items/${itemId}.json`,
-                JSON.stringify(editedItem))
+            $http.patch(`${FirebaseURL}items/${itemId}.json`, editedItem)
                 .success((objFromFirebase) => {
                     resolve(objFromFirebase);
                 })
